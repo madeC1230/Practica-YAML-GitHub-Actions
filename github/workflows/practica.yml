@@ -1,0 +1,25 @@
+
+name: Practica GitHub Actions
+
+on:
+  push:
+    branches: [main, desarrollo]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar archivos
+        run: |
+          echo "Verificando el repositorio"
+          test -f README.md
+          echo "El archivo README existe"
+
+      - name: Finalizar proceso
+        run: echo "Practica ejecutada correctamente"
