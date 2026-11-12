@@ -3,7 +3,7 @@ name: Practica GitHub Actions
 
 on:
   push:
-    branches: [main, desarrollo]
+    branches: [main, desarrollar]
   pull_request:
     branches: [main]
 
